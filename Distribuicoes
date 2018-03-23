@@ -10,10 +10,21 @@ function main() {
     console.log(result.toFixed(3));
     
     //Exemplo de Distribuicão Geométrica: Um produto tem 1/3 de chance
-    //de ser gerado defeituosamente, qual a probabilidade de na 5 inspeção
-    //ser encontrado o primeiro produto defeituoso ?
-    //Resposta: 0.066
-    console.log(DistribuicaoGeometrica(5, 1/3).toFixed(3));
+    //de ser gerado defeituosamente, qual a probabilidade de nas 5 primeiras 
+    //inspeções ser encontrado o primeiro produto defeituoso ?
+    //Resposta: 0.868
+    var result = DistribuicaoGeometrica(1, 1/3) +
+                 DistribuicaoGeometrica(2, 1/3) +
+                 DistribuicaoGeometrica(3, 1/3) +
+                 DistribuicaoGeometrica(4, 1/3) +
+                 DistribuicaoGeometrica(5, 1/3);
+
+    console.log(result.toFixed(3));
+    
+    //Uma variavel X segue a distribuição de poisson numa média de 2.5. 
+    //Encontre a probabilidade quando a variavel é igual a 5.
+    //Resposta: 0.067
+    console.log(DistribuicaoPoisson(5, 2.5).toFixed(3));
 }
 
 function Fatorial(value){
@@ -54,4 +65,17 @@ function DistribuicaoGeometrica(n, p, calc = true){
         result = Math.pow((1-p), n) * p;
     
     return parseFloat(result);
+}
+
+//Distribuição de Poisson de variavel aleatória, expressa a probabilidade de um evento ocorrer
+//em um determinado espaço de tempo.
+//Função:P(k,y) = y^k * e^-y / k!
+//Onde e é a constante de euler, k é o número de ocorrências do sucesso e y é a média de sucesso
+function DistribuicaoPoisson(k, y){
+    var E = 2.71828;
+    var result = 0;
+    
+    result = (Math.pow(y, k) * Math.pow(E, -y)) / Fatorial(k);
+    
+    return result;
 }
