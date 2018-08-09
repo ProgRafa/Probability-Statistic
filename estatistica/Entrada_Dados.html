@@ -1,0 +1,38 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Graphics</title>
+		<script type="text/javascript" src="./controller.js"></script>
+		<script type="text/javascript" src="./entradadados.js"></script>
+	</head>
+
+	<body>
+		<h1>Distribuição Binominal</h1>
+		<div class="container">
+			<div class="col">
+				<label>Título </label>
+				<input type="text" id="titulo"/>
+			</div>
+			<div class="col">
+				<label>Amostra </label>
+				<input type="text" id="amostra"/>
+			</div>
+			
+			<div class="col">
+				<label>Ocorrência </label>
+				<input type="text" id="ocorrencia"/>
+			</div>
+			
+			<div class="col">
+				<label>Probabilidade </label>
+				<input type="text" id="prob"/>
+			</div>
+			
+			<div class="col">
+				<button id="btnGoToGraphics" onclick="oController.goToGraphic()">Graphic</button>
+			</div>
+		</div>
+	</body>
+
+</html>
