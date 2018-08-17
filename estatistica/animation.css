@@ -1,0 +1,7 @@
+.animation{
+	transition: 1s ease all;
+}
+
+.animation > div, label, input, button {
+	transition: 0.7s ease all;
+}
