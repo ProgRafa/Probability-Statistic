@@ -1,0 +1,180 @@
+<html>
+	<head>
+		<title>Parâmetros</title>
+		<script type="text/javascript" src="controller.js"></script>
+		<script type="text/javascript" src="./EstatisticaParametros.js"></script>
+		<link rel="stylesheet" type="text/css" href="shape.css">
+		<link rel="stylesheet" type="text/css" href="animation.css">
+	</head>
+
+	<body>
+		<div class="header">
+			<div class="logo">Logo</div>
+			<div class="titulo">
+				<h1>Título</h1>
+			</div>
+			<div class="menu"><label>|||</label></div>
+		</div>
+		
+		<div class="jumbotron">
+			<div class="titulo">
+				<h2> Modelo </h2>
+			</div>
+			<div class="row hMenu animation">
+				<div class="col-7-25 tCen point hMenuPadrao" onmouseover="oController.menuEfeito(this, event)" onclick="oController.menuEfeito(this, event)" onmouseout="oController.menuEfeito(this, event)">
+					<label for="estatistic"> Estatístico </label>
+					<input type="radio" hidden id="estatistic" name="opt"/>
+				</div>
+				
+				<div class="col-7-25 tCen point hMenuPadrao" onmouseover="oController.menuEfeito(this, event)" onclick="oController.menuEfeito(this, event)" onmouseout="oController.menuEfeito(this, event)">
+					<label for="learning"> Aprendizado </label>
+					<input type="radio" hidden id="learning" name="opt"/>
+				</div>
+				
+				<div class="col-7-25 tCen point hMenuPadrao" onmouseover="oController.menuEfeito(this, event)" onclick="oController.menuEfeito(this, event)" onmouseout="oController.menuEfeito(this, event)">
+					<label for="algorith"> Algoritmos </label>
+					<input type="radio" hidden id="algorith" name="opt"/>
+				</div>
+			</div>
+			<form id="params">
+				<div class="container" id="estatisco">
+					<div class="row">
+						<div class="col-1-2">
+							<h3> Gráfico </h3>
+							<div class="row">
+								<div class="col-8-25 tDir">
+									<label>Tipo </label>
+								</div>
+								<div class="col-12-25 tCen">
+									<select id="tpGrafico">
+										<option>.:Selecione um gráfico:.</option>
+										<option value="point" class="opcao"> Gráfico de Pontos </option>
+										<option value="line"> Gráfico de Linhas </option>
+										<option value="area"> Gráfico de Área </option>
+										<option value="histogram"> Histograma </option>
+										<option value="pie"> Gráfico de Setores </option>
+									</select>
+								</div>
+								<div class="col-5-25">
+									<button type="button" class="btn square">...</button>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-3-25">
+							<label>Distribuição </label>
+						</div>
+						<div class="col-6-25">
+							<select id="tpGrafico">
+								<option>.:Selecione uma Distribuição:.</option>
+								<option value="normal"> Normal </option>
+								<option value="binomial"> Binomial </option>
+								<option value="geometrica"> Geométrica </option>
+								<option value="poisson"> Poisson </option>
+								<option value="freqAbs"> Frequência Absoluta </option>
+								<option value="freqRel"> Frequência Relativa </option>
+							</select>
+						</div>
+					</div>
+					<div class="row" id="normal">
+						<div class="col-13-25">
+							<div class="row">
+								<div class="col">
+									<label for="corGrafico">Cor do Grafico</label>
+									<input type="text" id="corGrafico" />
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<label for="opacidade">Opacidade da linha</label>
+									Min.<input type="range" min="0" max="1" step="0.1" id="opacidade" />Max.
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<label for="cPlanoFundo">Plano de Fundo</label>
+									<input type="text" id="cPlanoFundo" />
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									
+								</div>
+							</div>
+						</div>
+						<div class="col-12-25">
+							
+						</div>
+					</div>
+					<div class="container">
+						<div class="row"><h3>Métricas </h3></div>
+						<div class="row">
+							<div class="col-5-25">
+								<label for="mean">Média </label>
+								<input type="checkbox" id="mean"/>
+							</div>
+							<div class="col-5-25">
+								<label for="median">Mediana</label>
+								<input type="checkbox" id="median"/>
+							</div>
+							<div class="col-5-25">
+								<label for="modal">Modal</label>
+								<input type="checkbox" id="modal"/>
+							</div>
+							<div class="col-5-25">
+								<label for="variance">Variância</label>
+								<input type="checkbox" id="variance"/>
+							</div>
+							<div class="col-5-25">
+								<label for="standard_deviation">Desvio Padrão</label>
+								<input type="checkbox" id="standard_deviation"/>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="container hide" id="aprenizado">	
+					<div class="row">
+						<div class="col">
+							<label>Tipo de Modelo </label>
+						</div>
+						<div class="col">
+							<select id="tpGrafico">
+								<option>.:Selecione um modelo:.</option>
+								<option value="nnCluster"> Rede Neural Cluster </option>
+								<option value="nnPreemp"> Rede Neural Preemp. </option>
+								<option value="nBayes"> Naive Bayes </option>
+								<option value="tree"> Arvore de Decisão </option>
+								<option value="kNN"> kNN </option>
+								<option value="kMeans"> K-Means </option>
+							</select>
+						</div>
+					</div>
+				</div>
+				
+				<div class="container hide" id="algorítmo">	
+					<div class="row">
+						<div class="col">
+							<label>Tipo de Algorítmo </label>
+						</div>
+						<div class="col">
+							<select id="tpGrafico">
+								<option>.:Selecione um algorítmo:.</option>
+								<option value="nnCluster"> Algorítmo Genético </option>
+								<option value="nnPreemp"> Sistema Especialista X </option>
+								<option value="nBayes"> Prolog. </option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row">
+						<h3>Importar CSV</h3><div></div>
+					</div>
+				</div>
+			</form>
+		</div>
+		
+		<div class="footer"></div>
+	</body>
+</html>
