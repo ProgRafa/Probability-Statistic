@@ -1,0 +1,12 @@
+#img-login{
+    font-size: 150px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: white;
+    line-height: 200px; 
+}
+
+#img-login > i{
+    line-height: 200px;
+}

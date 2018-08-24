@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="shape.css">
+    <link rel="stylesheet" type="text/css" href="button.css">
+    <link rel="stylesheet" type="text/css" href="animation.css">
+    <link rel="stylesheet" type="text/css" href="manager.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+    <script type="text/javascript" src="./controller.js"></script>
+    <script type="text/javascript" src="./manager.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="row">
+            <div class="col-5-16">
+                <div id="logo">
+                    <i class="fas fa-robot"></i>
+                    <h1>Naive Bot</h1>
+                </div>
+            </div>
+            <div class="col-11-16">
+                <div class="row" id="nav-menu">
+                    <a class="col-4-16" href="#relatorio">Relatórios</a>
+                    <a class="col-4-16" href="#modelo">Modelos</a>
+                    <a class="col-4-16" href="#metrica">Métricas</a>
+                    <a class="col-4-16" href="#gerencia">Gerência</a>
+                </div>
+            </div>
+            <div class="col">
+                <button class="btn" id="logon"><i class="fas fa-sign-in-alt"></i></button>
+            </div>
+            <div class="col">
+                <button class="btn" id="settings"><i class="fas fa-cog"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row box" id="modelo">
+            <div class="row"></div>
+            <div class="row"></div>
+            <div class="row"></div>
+            <div class="row"></div>
+        </div>
+        <div class="row box" id="relatorio">
+            <h2>Relatórios</h2>
+        </div>
+        <div class="row box" id="metrica">
+            <h2>Métricas</h2>
+        </div>
+        <div class="row box" id="gerencia">
+            <h2>Gerência</h2>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="row">
+            <div class="col-1-3" id="util"></div>
+            <div class="col-1-3" id="contact"></div>
+            <div class="col-1-3" id="media"></div>
+        </div>
+    </div>
+</body>
+
+</html>

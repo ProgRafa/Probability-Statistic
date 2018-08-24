@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="shape.css">
+    <link rel="stylesheet" type="text/css" href="button.css">
+    <link rel="stylesheet" type="text/css" href="animation.css">
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+    <script type="text/javascript" src="./controller.js"></script>
+    <script type="text/javascript" src="./login.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row tCen">
+            <div class="col-8-16">
+                <div class="jumbotron">
+                    <div class="row tCen">
+                        <div class="col" id="img-login">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-16-16">
+                            <label for="user" class="txt-info">User</label>
+                            <input type="text" onclick="oController.text(this)" onblur="validarUsuario(this)" id="user" class="txt-box" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-16-16">
+                            <label for="password" class="txt-info">Password</label>
+                            <input type="password" onclick="oController.text(this)" onblur="validarSenha(this)" id="password" class="txt-box" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-16-16">
+                            <button class="btn" onclick="logar()">Entrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
